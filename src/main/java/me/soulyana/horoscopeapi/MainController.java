@@ -74,10 +74,18 @@ public class MainController {
         return "list";
 
     }
+
     @RequestMapping("/showtodayhoroscope/{sunsign}")
-    public @ResponseBody String showIndex(@PathVariable ("sunsign") String sunsign) {
+    public @ResponseBody String showTodayHoroscope(@PathVariable ("sunsign") String sunsign) {
         RestTemplate restTemplate = new RestTemplate();
         Horoscope horoscope = restTemplate.getForObject("http://horoscope-api.herokuapp.com/horoscope/today/"+sunsign, Horoscope.class);
         return horoscope.toString();
     }
+
+//    @RequestMapping("/showweekhoroscope/{sunsign}")
+//    public @ResponseBody String showWeekHoroscope(@PathVariable("sunsign") String sunsign) {
+//        RestTemplate restTemplate = new RestTemplate();
+//        Horoscope horoscope = restTemplate.getForObject("http://horoscope-api.herokuapp.com/horoscope/week/"+sunsign, Horoscope.class);
+//        return horoscope.toString();
+//    }
 }

@@ -8,7 +8,7 @@ public class Horoscope {
     private String date;
     private String horoscope;
     private String sunsign;
-//    private Date week;
+    private String week;
 //    private Date month;
 //    private Date year;
 
@@ -41,13 +41,13 @@ public class Horoscope {
         this.sunsign = sunsign;
     }
 
-//    public Date getWeek() {
-//        return week;
-//    }
-//
-//    public void setWeek(Date week) {
-//        this.week = week;
-//    }
+    public String getWeek() {
+        return week;
+    }
+
+    public void setWeek(String week) {
+        this.week = week;
+    }
 //
 //    public Date getMonth() {
 //        return month;
